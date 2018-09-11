@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title text-center>
+            Home Page
+        </ion-title>
+        <!-- <button ion-button menuToggle ion-right>
+        <ion-icon name="menu"></ion-icon>
+      </button> -->
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label color="primary">Customer Name :</ion-label>
+            <ion-input type="text" [(ngModel)]="customerName" value="{{customerName}}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary">Address 1 :</ion-label>
+            <ion-input type="text" [(ngModel)]="addressLine1" value="{{addressLine1}}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary">Address 2 :</ion-label>
+            <ion-input type="text" [(ngModel)]="addressLine2" value="{{addressLine2}}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary">City :</ion-label>
+            <ion-input type="text" [(ngModel)]="city" value="{{city}}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary">Province :</ion-label>
+            <ion-input type="text" [(ngModel)]="province" value="{{province}}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary">Postal Code :</ion-label>
+            <ion-input type="text" [(ngModel)]="postalCode" value="{{postalCode}}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary">Phone 1 :</ion-label>
+            <ion-input type="text" [(ngModel)]="phone1" value="{{phone2}}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary">Phone 2 :</ion-label>
+            <ion-input type="text" [(ngModel)]="phone2" value="{{phone2}}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <button ion-button outline color="secondary">Save</button>
+            <button ion-button outline color="danger">Cancel</button>
+        </ion-item>
+    </ion-list>
+</ion-content>
