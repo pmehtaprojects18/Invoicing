@@ -25682,6 +25682,10 @@ cust-invoice .invoiceDate {
   max-width: 200px;
 }
 
+customer-detail .button {
+  min-width: 100px !important;
+}
+
 page-home ion-card img {
   width: 100px;
   height: auto;

@@ -1,13 +1,27 @@
-<!-- Generated template for the CustInvoiceComponent component -->
-<div>
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>
+      Home Page
+    </ion-title>
+    <!-- <button ion-button menuToggle ion-right>
+      <ion-icon name="menu"></ion-icon>
+    </button> -->
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
   <ion-list>
     <ion-item>
       <ion-label color="primary">Invoice Date :</ion-label>
       <ion-input type="date" [(ngModel)]="invoiceDate" value="{{invoiceDate}}" class="invoiceDate"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label color="primary">Invoice Date :</ion-label>
-      <ion-input type="date" [(ngModel)]="invoiceDate" value="{{invoiceDate}}" class="invoiceDate"></ion-input>
+      <ion-label color="primary">Invoice Number :</ion-label>
+      <ion-input type="text" [(ngModel)]="invoiceNumber" value="{{invoiceNumber}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Customer :</ion-label>
+      <ion-input type="text" [(ngModel)]="invoiceNumber" value="{{invoiceNumber}}"></ion-input>
     </ion-item>
   </ion-list>
-</div>
+</ion-content>

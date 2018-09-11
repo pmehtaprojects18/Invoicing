@@ -1,7 +1,7 @@
 <ion-grid>
     <ion-row>
       <ion-col col-sm-12 col-md-6 col-xl-2>
-        <ion-card (click)="openInvoice()">
+        <ion-card (click)="openModule(uiComponent.CUSTOMERINVOICE)">
           <img src="assets/imgs/invoice.png" />
           <ion-card-content>
             <ion-card-title text-center>
@@ -11,7 +11,7 @@
         </ion-card>
       </ion-col>
       <ion-col col-sm-12 col-md-6 col-xl-2>
-        <ion-card>
+        <ion-card  (click)="openModule(uiComponent.CUSTOMERS)">
           <img src="assets/imgs/customers.png" />
           <ion-card-content>
             <ion-card-title text-center>

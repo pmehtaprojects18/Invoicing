@@ -1,17 +1,18 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
     <ion-title text-center>
       Home Page
     </ion-title>
+    <!-- <button ion-button menuToggle ion-right>
+      <ion-icon name="menu"></ion-icon>
+    </button> -->
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <main-menu *ngIf="uiService.selectedUI === uiComponent.MAINMENU"></main-menu>
-  <cust-invoice *ngIf="uiService.selectedUI === uiComponent.CUSTOMERINVOICE"></cust-invoice>
+  <main-menu></main-menu>
+  <!-- <cust-invoice *ngIf="uiService.selectedUI === uiComponent.CUSTOMERINVOICE"></cust-invoice>
+  <customer-detail *ngIf="uiService.selectedUI === uiComponent.CUSTOMERS"></customer-detail> -->
 </ion-content>
 <ion-footer>
   <ion-toolbar>

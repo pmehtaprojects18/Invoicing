@@ -10,6 +10,7 @@ import { LoginPage } from '../pages/login/login';
 import { ComponentsModule } from '../components/components.module';
 import { UiServiceProvider } from '../providers/ui-service/ui-service';
 import { DatePicker } from '@ionic-native/date-picker';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,11 @@ import { DatePicker } from '@ionic-native/date-picker';
   imports: [
     BrowserModule,
     ComponentsModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot({
+      name: '__namaneledb',
+         driverOrder: ['indexeddb', 'sqlite', 'websql']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
