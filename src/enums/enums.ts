@@ -4,3 +4,8 @@ export enum UICOMPONENTS{
     CUSTOMERS = "CUSTOMERS",
     REPORTS = "REPORTS"
 }
+
+export enum STORAGEVALUES{
+    CUSTOMER = "customers",
+    CUSTINVOICES = "customerinvoices",
+}

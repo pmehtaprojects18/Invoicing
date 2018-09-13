@@ -10,6 +10,9 @@ import { LoginPage } from '../pages/login/login';
 import { ComponentsModule } from '../components/components.module';
 import { UiServiceProvider } from '../providers/ui-service/ui-service';
 import { DatePicker } from '@ionic-native/date-picker';
+import { IonicStorageModule } from '@ionic/storage';
+import { CustomerService } from '../providers/customer/customer.service';
+import { DataStorageService } from '../providers/storage/storage.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,11 @@ import { DatePicker } from '@ionic-native/date-picker';
   imports: [
     BrowserModule,
     ComponentsModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot({
+      name: '__namaneledb',
+         driverOrder: ['indexeddb', 'sqlite', 'websql']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -33,7 +40,9 @@ import { DatePicker } from '@ionic-native/date-picker';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UiServiceProvider,
-    DatePicker
+    DatePicker,
+    CustomerService,
+		DataStorageService
   ]
 })
 export class AppModule {}

@@ -1,6 +1,7 @@
 
 import { Injectable } from '@angular/core';
 import { UICOMPONENTS } from '../../enums/enums';
+import { ToastController } from 'ionic-angular';
 
 /*
   Generated class for the UiServiceProvider provider.
@@ -13,8 +14,17 @@ export class UiServiceProvider {
 
   public selectedUI:UICOMPONENTS = UICOMPONENTS.MAINMENU;
 
-  constructor() {
+  constructor(private toastCtrl:ToastController) {
     console.log('Hello UiServiceProvider Provider');
   }
 
+  displayToast(msg:string){
+    let toast = this.toastCtrl.create({
+      message: msg,
+      duration: 2000,
+      position: 'top'
+    });
+  
+    toast.present();
+  }
 }

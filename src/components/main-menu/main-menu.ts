@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { UiServiceProvider } from '../../providers/ui-service/ui-service';
 import { UICOMPONENTS } from '../../enums/enums';
+import { NavController } from 'ionic-angular';
+import { CustInvoiceComponent } from '../cust-invoice/cust-invoice';
+import { CustomerDetailsComponent } from '../customer/customer-details';
 /**
  * Generated class for the MainMenuComponent component.
  *
@@ -13,14 +16,24 @@ import { UICOMPONENTS } from '../../enums/enums';
 })
 export class MainMenuComponent {
 
-  text: string;
+  public uiComponent = UICOMPONENTS;
 
-  constructor(private uiService:UiServiceProvider) {
-    console.log('Hello MainMenuComponent Component');
-    this.text = 'Hello World';
+  constructor(
+    private uiService:UiServiceProvider,
+    private navCtrl:NavController) {
+    
   }
 
-  openInvoice(){
-    this.uiService.selectedUI = UICOMPONENTS.CUSTOMERINVOICE;
+  openModule(compModule:UICOMPONENTS){
+    switch(compModule){
+      case UICOMPONENTS.CUSTOMERINVOICE:
+        this.uiService.selectedUI = UICOMPONENTS.CUSTOMERINVOICE;
+        this.navCtrl.push(CustInvoiceComponent);
+        break;
+      case UICOMPONENTS.CUSTOMERS:
+        this.uiService.selectedUI = UICOMPONENTS.CUSTOMERS;
+        this.navCtrl.push(CustomerDetailsComponent);
+        break;
+    }
   }
 }
