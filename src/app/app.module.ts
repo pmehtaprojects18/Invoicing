@@ -11,6 +11,8 @@ import { ComponentsModule } from '../components/components.module';
 import { UiServiceProvider } from '../providers/ui-service/ui-service';
 import { DatePicker } from '@ionic-native/date-picker';
 import { IonicStorageModule } from '@ionic/storage';
+import { CustomerService } from '../providers/customer/customer.service';
+import { DataStorageService } from '../providers/storage/storage.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { IonicStorageModule } from '@ionic/storage';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UiServiceProvider,
-    DatePicker
+    DatePicker,
+    CustomerService,
+		DataStorageService
   ]
 })
 export class AppModule {}

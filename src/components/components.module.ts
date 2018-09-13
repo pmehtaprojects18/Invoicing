@@ -3,6 +3,7 @@ import { IonicModule } from 'ionic-angular';
 import { MainMenuComponent } from './main-menu/main-menu';
 import { CustInvoiceComponent } from './cust-invoice/cust-invoice';
 import { CustomerDetailsComponent } from './customer/customer-details';
+
 @NgModule({
 	declarations: [
 		MainMenuComponent,

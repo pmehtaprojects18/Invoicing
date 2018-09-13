@@ -1,67 +1,5 @@
 webpackJsonp([0],{
 
-/***/ 102:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UiServiceProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__enums_enums__ = __webpack_require__(103);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/*
-  Generated class for the UiServiceProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
-var UiServiceProvider = /** @class */ (function () {
-    function UiServiceProvider() {
-        this.selectedUI = __WEBPACK_IMPORTED_MODULE_1__enums_enums__["a" /* UICOMPONENTS */].MAINMENU;
-        console.log('Hello UiServiceProvider Provider');
-    }
-    UiServiceProvider = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [])
-    ], UiServiceProvider);
-    return UiServiceProvider;
-}());
-
-//# sourceMappingURL=ui-service.js.map
-
-/***/ }),
-
-/***/ 103:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UICOMPONENTS; });
-/* unused harmony export STORAGEVALUES */
-var UICOMPONENTS;
-(function (UICOMPONENTS) {
-    UICOMPONENTS["MAINMENU"] = "MAINMENU";
-    UICOMPONENTS["CUSTOMERINVOICE"] = "CUSTOMERINVOICE";
-    UICOMPONENTS["CUSTOMERS"] = "CUSTOMERS";
-    UICOMPONENTS["REPORTS"] = "REPORTS";
-})(UICOMPONENTS || (UICOMPONENTS = {}));
-var STORAGEVALUES;
-(function (STORAGEVALUES) {
-    STORAGEVALUES["CUSTOMER"] = "customers";
-    STORAGEVALUES["CUSTINVOICES"] = "customerinvoices";
-})(STORAGEVALUES || (STORAGEVALUES = {}));
-//# sourceMappingURL=enums.js.map
-
-/***/ }),
-
 /***/ 112:
 /***/ (function(module, exports) {
 
@@ -102,7 +40,7 @@ webpackEmptyAsyncContext.id = 153;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(197);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -149,9 +87,9 @@ var LoginPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_ui_service_ui_service__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__enums_enums__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_ui_service_ui_service__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__enums_enums__ = __webpack_require__(52);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -169,7 +107,7 @@ var HomePage = /** @class */ (function () {
     function HomePage(navCtrl, uiService) {
         this.navCtrl = navCtrl;
         this.uiService = uiService;
-        this.uiComponent = __WEBPACK_IMPORTED_MODULE_3__enums_enums__["a" /* UICOMPONENTS */];
+        this.uiComponent = __WEBPACK_IMPORTED_MODULE_3__enums_enums__["b" /* UICOMPONENTS */];
     }
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
@@ -237,22 +175,47 @@ var CustInvoiceComponent = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomerDetailsComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__model_customer_class__ = __webpack_require__(405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_customer_customer_service__ = __webpack_require__(324);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_ui_service_ui_service__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
 
 var CustomerDetailsComponent = /** @class */ (function () {
-    function CustomerDetailsComponent() {
+    function CustomerDetailsComponent(custmerService, uiService) {
+        this.custmerService = custmerService;
+        this.uiService = uiService;
     }
+    CustomerDetailsComponent.prototype.ngOnInit = function () {
+        this.newCustomer = new __WEBPACK_IMPORTED_MODULE_1__model_customer_class__["a" /* Customer */]();
+    };
+    CustomerDetailsComponent.prototype.saveCustomer = function () {
+        var _this = this;
+        this.custmerService.addNewCustomer(this.newCustomer).then(function (result) {
+            if (result) {
+                _this.uiService.displayToast("Customer Created Successfully!!");
+                _this.newCustomer = new __WEBPACK_IMPORTED_MODULE_1__model_customer_class__["a" /* Customer */]();
+            }
+        });
+    };
     CustomerDetailsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'customer-detail',template:/*ion-inline-start:"/Users/pranavmehta/Documents/MyProject/Invoicing/Invoicing/src/components/customer/customer-details.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title text-center>\n            Home Page\n        </ion-title>\n        <!-- <button ion-button menuToggle ion-right>\n        <ion-icon name="menu"></ion-icon>\n      </button> -->\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-list>\n        <ion-item>\n            <ion-label color="primary">Customer Name :</ion-label>\n            <ion-input type="text" [(ngModel)]="customerName" value="{{customerName}}"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color="primary">Address 1 :</ion-label>\n            <ion-input type="text" [(ngModel)]="addressLine1" value="{{addressLine1}}"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color="primary">Address 2 :</ion-label>\n            <ion-input type="text" [(ngModel)]="addressLine2" value="{{addressLine2}}"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color="primary">City :</ion-label>\n            <ion-input type="text" [(ngModel)]="city" value="{{city}}"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color="primary">Province :</ion-label>\n            <ion-input type="text" [(ngModel)]="province" value="{{province}}"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color="primary">Postal Code :</ion-label>\n            <ion-input type="text" [(ngModel)]="postalCode" value="{{postalCode}}"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color="primary">Phone 1 :</ion-label>\n            <ion-input type="text" [(ngModel)]="phone1" value="{{phone2}}"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color="primary">Phone 2 :</ion-label>\n            <ion-input type="text" [(ngModel)]="phone2" value="{{phone2}}"></ion-input>\n        </ion-item>\n        <ion-item>\n            <button ion-button outline color="secondary">Save</button>\n            <button ion-button outline color="danger">Cancel</button>\n        </ion-item>\n    </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/pranavmehta/Documents/MyProject/Invoicing/Invoicing/src/components/customer/customer-details.html"*/
-        })
+            selector: 'customer-detail',template:/*ion-inline-start:"/Users/pranavmehta/Documents/MyProject/Invoicing/Invoicing/src/components/customer/customer-details.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title text-center>\n            Customer\n        </ion-title>\n        <!-- <button ion-button menuToggle ion-right>\n        <ion-icon name="menu"></ion-icon>\n      </button> -->\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-list>\n        <ion-item>\n            <ion-label color="primary">Customer Name :</ion-label>\n            <ion-input type="text" [(ngModel)]="newCustomer.customerName" value="{{newCustomer.customerName}}"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color="primary">Address 1 :</ion-label>\n            <ion-input type="text" [(ngModel)]="newCustomer.address1" value="{{newCustomer.address1}}"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color="primary">Address 2 :</ion-label>\n            <ion-input type="text" [(ngModel)]="newCustomer.address2" value="{{newCustomer.address2}}"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color="primary">City :</ion-label>\n            <ion-input type="text" [(ngModel)]="newCustomer.city" value="{{newCustomer.city}}"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color="primary">Province :</ion-label>\n            <ion-input type="text" [(ngModel)]="newCustomer.province" value="{{newCustomer.province}}"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color="primary">Postal Code :</ion-label>\n            <ion-input type="text" [(ngModel)]="newCustomer.postalCode" value="{{newCustomer.postalCode}}"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color="primary">Phone 1 :</ion-label>\n            <ion-input type="text" [(ngModel)]="newCustomer.phone1" value="{{newCustomer.phone2}}"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color="primary">Phone 2 :</ion-label>\n            <ion-input type="text" [(ngModel)]="newCustomer.phone2" value="{{newCustomer.phone2}}"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color="primary">Email :</ion-label>\n            <ion-input type="text" [(ngModel)]="newCustomer.email" value="{{newCustomer.email}}"></ion-input>\n        </ion-item>\n        <ion-item>\n            <button ion-button outline color="secondary" [disabled]="newCustomer.customerName.length <=3" (click)="saveCustomer()">Save</button>\n            <button ion-button outline color="danger">Cancel</button>\n        </ion-item>\n    </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/pranavmehta/Documents/MyProject/Invoicing/Invoicing/src/components/customer/customer-details.html"*/
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__providers_customer_customer_service__["a" /* CustomerService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_customer_customer_service__["a" /* CustomerService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__providers_ui_service_ui_service__["a" /* UiServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_ui_service_ui_service__["a" /* UiServiceProvider */]) === "function" && _b || Object])
     ], CustomerDetailsComponent);
     return CustomerDetailsComponent;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=customer-details.js.map
@@ -263,9 +226,138 @@ var CustomerDetailsComponent = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomerService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__storage_storage_service__ = __webpack_require__(325);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__enums_enums__ = __webpack_require__(52);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var CustomerService = /** @class */ (function () {
+    function CustomerService(storageService) {
+        this.storageService = storageService;
+        this.customers = [];
+    }
+    CustomerService.prototype.addNewCustomer = function (customer) {
+        var _this = this;
+        return new Promise(function (response, reject) {
+            _this.storageService.getData(__WEBPACK_IMPORTED_MODULE_2__enums_enums__["a" /* STORAGEVALUES */].CUSTOMER).then(function (data) {
+                if (!data) {
+                    customer.customerId = new Date().getTime().toString();
+                    _this.customers.push(customer);
+                }
+                else {
+                    _this.customers = data;
+                    var cust = _this.customers.find(function (item) { return item.customerId === customer.customerId; });
+                    if (cust) {
+                        cust = customer;
+                    }
+                    else {
+                        customer.customerId = new Date().getTime().toString();
+                        _this.customers.push(customer);
+                    }
+                }
+                if (_this.customers.length > 0) {
+                    _this.storageService.saveData(__WEBPACK_IMPORTED_MODULE_2__enums_enums__["a" /* STORAGEVALUES */].CUSTOMER, _this.customers).then(function () {
+                        console.log("Data Saved Succesfully");
+                        response(true);
+                    }).catch(function (err) {
+                        console.log("save customer Error: " + err);
+                        reject(false);
+                    });
+                }
+            });
+        });
+    };
+    CustomerService.prototype.getCustomerList = function () {
+        var _this = this;
+        return new Promise(function (response, reject) {
+            _this.storageService.getData(__WEBPACK_IMPORTED_MODULE_2__enums_enums__["a" /* STORAGEVALUES */].CUSTOMER).then(function (data) {
+                console.log(data);
+                response(data);
+            }).catch(function (err) {
+                console.log(err);
+                reject();
+            });
+        });
+    };
+    CustomerService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__storage_storage_service__["a" /* DataStorageService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__storage_storage_service__["a" /* DataStorageService */]) === "function" && _a || Object])
+    ], CustomerService);
+    return CustomerService;
+    var _a;
+}());
+
+//# sourceMappingURL=customer.service.js.map
+
+/***/ }),
+
+/***/ 325:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataStorageService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(326);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var DataStorageService = /** @class */ (function () {
+    function DataStorageService(dataStorage) {
+        this.dataStorage = dataStorage;
+    }
+    DataStorageService.prototype.saveData = function (key, value) {
+        return this.dataStorage.set(key, value);
+    };
+    DataStorageService.prototype.getData = function (key) {
+        return this.dataStorage.get(key);
+    };
+    DataStorageService.prototype.updateData = function (key, value) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var data = _this.dataStorage.get(key).then(function (val) {
+                resolve();
+            }).catch(function (err) {
+                reject(err);
+            });
+        });
+    };
+    DataStorageService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */]])
+    ], DataStorageService);
+    return DataStorageService;
+}());
+
+//# sourceMappingURL=storage.service.js.map
+
+/***/ }),
+
+/***/ 327:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(325);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(347);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(328);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(350);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -273,29 +365,33 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 347:
+/***/ 350:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(397);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(400);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_components_module__ = __webpack_require__(398);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_ui_service_ui_service__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_components_module__ = __webpack_require__(401);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_ui_service_ui_service__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_date_picker__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_storage__ = __webpack_require__(402);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_storage__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_customer_customer_service__ = __webpack_require__(324);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_storage_storage_service__ = __webpack_require__(325);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -340,7 +436,9 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
                 __WEBPACK_IMPORTED_MODULE_9__providers_ui_service_ui_service__["a" /* UiServiceProvider */],
-                __WEBPACK_IMPORTED_MODULE_10__ionic_native_date_picker__["a" /* DatePicker */]
+                __WEBPACK_IMPORTED_MODULE_10__ionic_native_date_picker__["a" /* DatePicker */],
+                __WEBPACK_IMPORTED_MODULE_12__providers_customer_customer_service__["a" /* CustomerService */],
+                __WEBPACK_IMPORTED_MODULE_13__providers_storage_storage_service__["a" /* DataStorageService */]
             ]
         })
     ], AppModule);
@@ -351,13 +449,13 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 397:
+/***/ 400:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(196);
@@ -397,14 +495,14 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 398:
+/***/ 401:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentsModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__main_menu_main_menu__ = __webpack_require__(399);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__main_menu_main_menu__ = __webpack_require__(402);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__cust_invoice_cust_invoice__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__customer_customer_details__ = __webpack_require__(323);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -449,15 +547,15 @@ var ComponentsModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 399:
+/***/ 402:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainMenuComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_ui_service_ui_service__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__enums_enums__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_ui_service_ui_service__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__enums_enums__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cust_invoice_cust_invoice__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__customer_customer_details__ = __webpack_require__(323);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -485,16 +583,16 @@ var MainMenuComponent = /** @class */ (function () {
     function MainMenuComponent(uiService, navCtrl) {
         this.uiService = uiService;
         this.navCtrl = navCtrl;
-        this.uiComponent = __WEBPACK_IMPORTED_MODULE_2__enums_enums__["a" /* UICOMPONENTS */];
+        this.uiComponent = __WEBPACK_IMPORTED_MODULE_2__enums_enums__["b" /* UICOMPONENTS */];
     }
     MainMenuComponent.prototype.openModule = function (compModule) {
         switch (compModule) {
-            case __WEBPACK_IMPORTED_MODULE_2__enums_enums__["a" /* UICOMPONENTS */].CUSTOMERINVOICE:
-                this.uiService.selectedUI = __WEBPACK_IMPORTED_MODULE_2__enums_enums__["a" /* UICOMPONENTS */].CUSTOMERINVOICE;
+            case __WEBPACK_IMPORTED_MODULE_2__enums_enums__["b" /* UICOMPONENTS */].CUSTOMERINVOICE:
+                this.uiService.selectedUI = __WEBPACK_IMPORTED_MODULE_2__enums_enums__["b" /* UICOMPONENTS */].CUSTOMERINVOICE;
                 this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cust_invoice_cust_invoice__["a" /* CustInvoiceComponent */]);
                 break;
-            case __WEBPACK_IMPORTED_MODULE_2__enums_enums__["a" /* UICOMPONENTS */].CUSTOMERS:
-                this.uiService.selectedUI = __WEBPACK_IMPORTED_MODULE_2__enums_enums__["a" /* UICOMPONENTS */].CUSTOMERS;
+            case __WEBPACK_IMPORTED_MODULE_2__enums_enums__["b" /* UICOMPONENTS */].CUSTOMERS:
+                this.uiService.selectedUI = __WEBPACK_IMPORTED_MODULE_2__enums_enums__["b" /* UICOMPONENTS */].CUSTOMERS;
                 this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__customer_customer_details__["a" /* CustomerDetailsComponent */]);
                 break;
         }
@@ -513,7 +611,7 @@ var MainMenuComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 401:
+/***/ 404:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -778,9 +876,121 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 401;
+webpackContext.id = 404;
+
+/***/ }),
+
+/***/ 405:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Customer; });
+var Customer = /** @class */ (function () {
+    function Customer(rawObject) {
+        if (rawObject) {
+            this.customerId = rawObject['customerId'];
+            this.customerName = rawObject['customerName'];
+            this.address1 = rawObject['address1'];
+            this.address2 = rawObject['address2'];
+            this.city = rawObject['city'];
+            this.province = rawObject['province'];
+            this.postalCode = rawObject['postalCode'];
+            this.phone1 = rawObject['phone1'];
+            this.phone2 = rawObject['phone2'];
+            this.email = rawObject['email'];
+        }
+        else {
+            this.customerId = '';
+            this.customerName = '';
+            this.address1 = '';
+            this.address2 = '';
+            this.city = '';
+            this.province = '';
+            this.postalCode = '';
+            this.phone1 = '';
+            this.phone2 = '';
+            this.email = '';
+        }
+    }
+    return Customer;
+}());
+
+//# sourceMappingURL=customer.class.js.map
+
+/***/ }),
+
+/***/ 51:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UiServiceProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__enums_enums__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(26);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/*
+  Generated class for the UiServiceProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var UiServiceProvider = /** @class */ (function () {
+    function UiServiceProvider(toastCtrl) {
+        this.toastCtrl = toastCtrl;
+        this.selectedUI = __WEBPACK_IMPORTED_MODULE_1__enums_enums__["b" /* UICOMPONENTS */].MAINMENU;
+        console.log('Hello UiServiceProvider Provider');
+    }
+    UiServiceProvider.prototype.displayToast = function (msg) {
+        var toast = this.toastCtrl.create({
+            message: msg,
+            duration: 2000,
+            position: 'top'
+        });
+        toast.present();
+    };
+    UiServiceProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* ToastController */]])
+    ], UiServiceProvider);
+    return UiServiceProvider;
+}());
+
+//# sourceMappingURL=ui-service.js.map
+
+/***/ }),
+
+/***/ 52:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return UICOMPONENTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return STORAGEVALUES; });
+var UICOMPONENTS;
+(function (UICOMPONENTS) {
+    UICOMPONENTS["MAINMENU"] = "MAINMENU";
+    UICOMPONENTS["CUSTOMERINVOICE"] = "CUSTOMERINVOICE";
+    UICOMPONENTS["CUSTOMERS"] = "CUSTOMERS";
+    UICOMPONENTS["REPORTS"] = "REPORTS";
+})(UICOMPONENTS || (UICOMPONENTS = {}));
+var STORAGEVALUES;
+(function (STORAGEVALUES) {
+    STORAGEVALUES["CUSTOMER"] = "customers";
+    STORAGEVALUES["CUSTINVOICES"] = "customerinvoices";
+})(STORAGEVALUES || (STORAGEVALUES = {}));
+//# sourceMappingURL=enums.js.map
 
 /***/ })
 
-},[324]);
+},[327]);
 //# sourceMappingURL=main.js.map
