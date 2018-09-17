@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
-import { DatePicker } from '@ionic-native/date-picker';
+// import { DatePicker } from '@ionic-native/date-picker';
 import * as moment from 'moment';
+import { CustomerService } from '../../providers/customer/customer.service';
+import { Customer } from '../../model/customer.class';
+import { CustomerInvoiceService } from '../../providers/invoice/customer-invoice.service';
 
 /**
  * Generated class for the CustInvoiceComponent component.
@@ -15,9 +18,16 @@ import * as moment from 'moment';
 export class CustInvoiceComponent {
 
   public invoiceDate:string = new Date().toLocaleDateString();
+  public custList:Array<Customer>;
 
-  constructor(private datePicker: DatePicker) {
+
+  constructor(public customerService:CustomerService, public invoiceService:CustomerInvoiceService) {
     this.invoiceDate = moment().format('YYYY-MM-DD');
   }
 
+ ngOnInit(){
+   this.customerService.getCustomerList().then(data =>{
+     this.custList = data;
+   })
+ }
 }

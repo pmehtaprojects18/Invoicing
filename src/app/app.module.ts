@@ -9,7 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { ComponentsModule } from '../components/components.module';
 import { UiServiceProvider } from '../providers/ui-service/ui-service';
-import { DatePicker } from '@ionic-native/date-picker';
+// import { DatePicker } from '@ionic-native/date-picker';
 import { IonicStorageModule } from '@ionic/storage';
 import { CustomerService } from '../providers/customer/customer.service';
 import { DataStorageService } from '../providers/storage/storage.service';
@@ -40,7 +40,7 @@ import { DataStorageService } from '../providers/storage/storage.service';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UiServiceProvider,
-    DatePicker,
+    // DatePicker,
     CustomerService,
 		DataStorageService
   ]
