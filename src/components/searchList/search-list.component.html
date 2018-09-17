@@ -1,0 +1,8 @@
+<div>
+    <ion-input type="text" [(ngModel)]="searchItem" value="{{searchItem}}"></ion-input>
+    <ion-list>
+        <ion-item *ngFor="let item of itemList">
+            <p>{{item.name}}</p>
+        </ion-item>
+    </ion-list>
+</div>

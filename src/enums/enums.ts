@@ -9,3 +9,11 @@ export enum STORAGEVALUES{
     CUSTOMER = "customers",
     CUSTINVOICES = "customerinvoices",
 }
+
+export enum TRANSACTIONTYPE{
+    SALES = "sales",
+    PURCHASE = "purchase",
+    PAYMENT = "payment",
+    RECEIPT = "receipt",
+    GERNALENTRY = "gernalentry"
+}

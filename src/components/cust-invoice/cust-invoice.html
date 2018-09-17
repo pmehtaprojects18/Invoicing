@@ -10,18 +10,19 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
+  <ion-list col-8>
     <ion-item>
       <ion-label color="primary">Invoice Date :</ion-label>
-      <ion-input type="date" [(ngModel)]="invoiceDate" value="{{invoiceDate}}" class="invoiceDate"></ion-input>
+      <ion-input type="date" [(ngModel)]="invoiceService.selectedInvoice.invoiceDate" value="{{invoiceService.selectedInvoice.invoiceDate}}" class="invoiceDate"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label color="primary">Invoice Number :</ion-label>
-      <ion-input type="text" [(ngModel)]="invoiceNumber" value="{{invoiceNumber}}"></ion-input>
+      <ion-input type="text" [(ngModel)]="invoiceService.selectedInvoice.invoiceNumber" value="{{invoiceService.selectedInvoice.invoiceNumber}}"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label color="primary">Customer :</ion-label>
-      <ion-input type="text" [(ngModel)]="invoiceNumber" value="{{invoiceNumber}}"></ion-input>
+      <!-- <ion-input type="text" [(ngModel)]="customerName" value="{{invoiceNumber}}"></ion-input> -->
+      <search-list  (searchList) = "custList" (searchType)="'Customer'"></search-list>
     </ion-item>
   </ion-list>
 </ion-content>

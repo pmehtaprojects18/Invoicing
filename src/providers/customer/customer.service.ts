@@ -21,9 +21,9 @@ export class CustomerService{
                     this.customers.push(customer);
                 }else{
                     this.customers = data;
-                    let cust = this.customers.find(item => item.customerId === customer.customerId);
+                    let cust:Customer = this.customers.find(item => item.customerId === customer.customerId);
                     if(cust){
-                        cust = customer;
+                        Object.assign(cust,customer);
                     }else{
                         customer.customerId = new Date().getTime().toString();
                         this.customers.push(customer);
@@ -42,7 +42,7 @@ export class CustomerService{
         })
     }
 
-    public getCustomerList():Promise<Customer>{
+    public getCustomerList():Promise<Customer[]>{
 
         return new Promise((response,reject)=> {
             this.storageService.getData(STORAGEVALUES.CUSTOMER).then(data =>{

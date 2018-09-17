@@ -3,12 +3,14 @@ import { IonicModule } from 'ionic-angular';
 import { MainMenuComponent } from './main-menu/main-menu';
 import { CustInvoiceComponent } from './cust-invoice/cust-invoice';
 import { CustomerDetailsComponent } from './customer/customer-details';
+import { SearchListComponent } from './searchList/search-list.component';
 
 @NgModule({
 	declarations: [
 		MainMenuComponent,
 		CustInvoiceComponent,
-		CustomerDetailsComponent
+		CustomerDetailsComponent,
+		SearchListComponent
 	],
 	imports: [
 		IonicModule
@@ -20,7 +22,8 @@ import { CustomerDetailsComponent } from './customer/customer-details';
 	exports: [
 		MainMenuComponent,
 		CustInvoiceComponent,
-		CustomerDetailsComponent
+		CustomerDetailsComponent,
+		SearchListComponent
 	]
 })
 export class ComponentsModule {}

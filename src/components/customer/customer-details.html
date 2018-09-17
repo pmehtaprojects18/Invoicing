@@ -9,47 +9,54 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <ion-list>
-        <ion-item>
-            <ion-label color="primary">Customer Name :</ion-label>
-            <ion-input type="text" [(ngModel)]="newCustomer.customerName" value="{{newCustomer.customerName}}"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label color="primary">Address 1 :</ion-label>
-            <ion-input type="text" [(ngModel)]="newCustomer.address1" value="{{newCustomer.address1}}"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label color="primary">Address 2 :</ion-label>
-            <ion-input type="text" [(ngModel)]="newCustomer.address2" value="{{newCustomer.address2}}"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label color="primary">City :</ion-label>
-            <ion-input type="text" [(ngModel)]="newCustomer.city" value="{{newCustomer.city}}"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label color="primary">Province :</ion-label>
-            <ion-input type="text" [(ngModel)]="newCustomer.province" value="{{newCustomer.province}}"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label color="primary">Postal Code :</ion-label>
-            <ion-input type="text" [(ngModel)]="newCustomer.postalCode" value="{{newCustomer.postalCode}}"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label color="primary">Phone 1 :</ion-label>
-            <ion-input type="text" [(ngModel)]="newCustomer.phone1" value="{{newCustomer.phone2}}"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label color="primary">Phone 2 :</ion-label>
-            <ion-input type="text" [(ngModel)]="newCustomer.phone2" value="{{newCustomer.phone2}}"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label color="primary">Email :</ion-label>
-            <ion-input type="text" [(ngModel)]="newCustomer.email" value="{{newCustomer.email}}"></ion-input>
-        </ion-item>
-        <ion-item>
-            <button ion-button outline color="secondary" [disabled]="newCustomer.customerName.length <=3" (click)="saveCustomer()">Save</button>
-            <button ion-button outline color="danger">Cancel</button>
-        </ion-item>
-    </ion-list>
+<ion-content>
+    <div ion-row>
+        <ion-list col-4>
+            <ion-item *ngFor="let customer of customers" (click)="selectCustomer(customer);" [ngClass]="{'item-selected':customer==newCustomer}">
+                <p>{{customer.customerName}}</p>
+            </ion-item>
+        </ion-list>
+        <ion-list col-8>
+            <ion-item>
+                <ion-label color="primary">Customer Name :</ion-label>
+                <ion-input type="text" [(ngModel)]="newCustomer.customerName" value="{{newCustomer.customerName}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Address 1 :</ion-label>
+                <ion-input type="text" [(ngModel)]="newCustomer.address1" value="{{newCustomer.address1}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Address 2 :</ion-label>
+                <ion-input type="text" [(ngModel)]="newCustomer.address2" value="{{newCustomer.address2}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">City :</ion-label>
+                <ion-input type="text" [(ngModel)]="newCustomer.city" value="{{newCustomer.city}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Province :</ion-label>
+                <ion-input type="text" [(ngModel)]="newCustomer.province" value="{{newCustomer.province}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Postal Code :</ion-label>
+                <ion-input type="text" [(ngModel)]="newCustomer.postalCode" value="{{newCustomer.postalCode}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Phone 1 :</ion-label>
+                <ion-input type="text" [(ngModel)]="newCustomer.phone1" value="{{newCustomer.phone2}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Phone 2 :</ion-label>
+                <ion-input type="text" [(ngModel)]="newCustomer.phone2" value="{{newCustomer.phone2}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Email :</ion-label>
+                <ion-input type="text" [(ngModel)]="newCustomer.email" value="{{newCustomer.email}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <button ion-button outline color="secondary" [disabled]="newCustomer.customerName.length <=3" (click)="saveCustomer()">Save</button>
+                <button ion-button outline color="danger" (click)="clearFields()">Clear</button>
+            </ion-item>
+        </ion-list>
+    </div>
 </ion-content>
