@@ -1,0 +1,13 @@
+www/lib
+node_modules/
+platforms/
+plugins/
+.vscode/
+node_modules
+.idea
+.temp
+.sass-cache
+*.swp
+*.swo
+*.log
+*.DS_Store
