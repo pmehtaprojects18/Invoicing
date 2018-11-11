@@ -13,6 +13,7 @@ import { UiServiceProvider } from '../providers/ui-service/ui-service';
 import { IonicStorageModule } from '@ionic/storage';
 import { CustomerService } from '../providers/customer/customer.service';
 import { DataStorageService } from '../providers/storage/storage.service';
+import { CustomerInvoiceService } from '../providers/invoice/customer-invoice.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { DataStorageService } from '../providers/storage/storage.service';
     UiServiceProvider,
     // DatePicker,
     CustomerService,
-		DataStorageService
+    DataStorageService,
+    CustomerInvoiceService
   ]
 })
 export class AppModule {}
